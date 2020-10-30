@@ -8,11 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="first_name">
-    <input type="text" id="last_name">
-    <input type="text" id="address">
-    <input type="text" id="phone">
-    
+
+    <div class="container col-md-4 mt-2 mb-2">
+        <input type="text" class="form-control" placeholder="First Name" id="first_name" required>
+        <div id="warning"></div>
+    </div>
+
+    <div class="container col-md-4 mt-2 mb-2">
+        <input type="text" class="form-control" placeholder="Last Name" id="last_name" required>
+    </div>
+
+    <div class="container col-md-4 mt-2 mb-2">
+        <input type="text" class="form-control" placeholder="Address" id="address" required>
+    </div>
+
+    <div class="container col-md-4 mt-2 mb-2">
+        <input type="text" class="form-control" placeholder="Phone" id="phone" required>
+    </div>
+
     <div class="container-md">
         <table class="table table-hover">
             <thead>
@@ -24,10 +37,10 @@
                 </tr>
             </thead>
             
-            <tbody id="myTable"></tbody>
+            <tbody id="table-body"></tbody>
         </table>
         <div class="text-center">
-            <button type="button" class="btn btn-secondary btn-lg" onclick="fillTable();">Fill the Table</button>
+            <button type="button" class="btn btn-secondary btn-lg" onclick="fillTable();">Add to the Table</button>
         </div>
     </div>
 </body>
