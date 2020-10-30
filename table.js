@@ -21,7 +21,7 @@ let arr = [
 
 function fillTable() {
     arr.forEach(function(item) {
-        document.getElementById('table').innerHTML += '<tr>' 
+        document.getElementById('myTable').innerHTML += '<tr>' 
         + '<td>' + item.first_name +'</td>' 
         + '<td>' + item.last_name +'</td>'
         + '<td>' + item.address +'</td>'
