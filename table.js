@@ -1,4 +1,4 @@
-let test = [];
+var test = [];
 
 
 function fillTable() {
@@ -37,10 +37,10 @@ function fillTable() {
     for (let i = 0; i < reset.length; i++){
         reset[i].value = '';
     }
-
 }
 
 
 function deleteRow(id) {
     document.getElementById(id).remove();
+    test.splice(id, 1);
 }
