@@ -1,6 +1,4 @@
 let test = [];
-let count = 0;
-
 
 
 function fillTable() {
@@ -12,6 +10,9 @@ function fillTable() {
         phone: document.getElementById('phone').value
     }
     test.push(arr);
+    for (var i = 0; i < test.length; i++){
+        var count = i;
+    }
 
 
     if (document.getElementById('first_name').value.length == 0) {
@@ -19,7 +20,6 @@ function fillTable() {
         return;
     } else {
         document.getElementById('warning').innerText = '';
-        count++;        
     }
     
 
@@ -42,5 +42,5 @@ function fillTable() {
 
 
 function deleteRow(id) {
-    document.getElementById(id).style.display = "none";
+    document.getElementById(id).remove();
 }
