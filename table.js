@@ -42,6 +42,5 @@ function fillTable() {
 
 
 function deleteRow(id) {
-    this.id = id;
     document.getElementById(id).style.display = "none";
 }
