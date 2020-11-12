@@ -33,10 +33,10 @@ function fillTable() {
         + '<button type="button"class="btn btn-success" onclick="editRow('+ count + ');">Edit</button></td></tr>'
         // Edit
         + '<tr style="display: none;" id="'+ count + '">'
-        + '<td class="align-middle"><input type="text" class="form-control" placeholder="s" id="edit_first_name' + count + '"></td>' 
-        + '<td class="align-middle"><input type="text" class="form-control" placeholder="s" id="edit_last_name' + count + '"></td>' 
-        + '<td class="align-middle"><input type="text" class="form-control" placeholder="s" id="edit_address' + count + '"></td>' 
-        + '<td class="align-middle"><input type="text" class="form-control" placeholder="s" id="edit_phone' + count + '"></td>' 
+        + '<td class="align-middle"><input type="text" class="form-control" placeholder="First Name" id="edit_first_name' + count + '"></td>' 
+        + '<td class="align-middle"><input type="text" class="form-control" placeholder="Last Name" id="edit_last_name' + count + '"></td>' 
+        + '<td class="align-middle"><input type="text" class="form-control" placeholder="Address" id="edit_address' + count + '"></td>' 
+        + '<td class="align-middle"><input type="text" class="form-control" placeholder="Phone" id="edit_phone' + count + '"></td>' 
         + '<td class="align-middle">' + '<button type="button" class="btn btn-primary mr-2" onclick="updateRow(' + count + ');">Update</button></td><tr>'
     
 
