@@ -39,10 +39,9 @@ function fillTable() {
         + '<td class="align-middle"><input type="text" class="form-control" placeholder="Phone" id="edit_phone' + count + '"></td>' 
         + '<td class="align-middle">' + '<button type="button" class="btn btn-primary mr-2" onclick="updateRow(' + count + ');">Update</button></td><tr>'
     
-
     let reset = document.getElementsByClassName('reset');
     for (let i = 0; i < reset.length; i++){
-        reset[i].value = '';
+    reset[i].value = '';
     }
 }
 
@@ -53,16 +52,32 @@ function deleteRow(id) {
 }
 
 
+
 function editRow(num) {
     document.getElementById(num).style.display = "contents";
-    return;
 }
 
 function updateRow(input_id) {
-    console.log(document.getElementById('edit_first_name' + input_id));
-    document.getElementById('table_first_name' + input_id).innerText = document.getElementById('edit_first_name' + input_id).value;
-    document.getElementById('table_last_name' + input_id).innerText = document.getElementById('edit_last_name' + input_id).value;
-    document.getElementById('table_address' + input_id).innerText = document.getElementById('edit_address' + input_id).value;
-    document.getElementById('table_phone' + input_id).innerText = document.getElementById('edit_phone' + input_id).value;
+
+    let firstName = document.getElementById('table_first_name' + input_id);
+    let lastName = document.getElementById('table_last_name' + input_id);
+    let phone = document.getElementById('table_address' + input_id);
+    let address = document.getElementById('table_phone' + input_id);
+    
+    let firstNameValue = document.getElementById('table_first_name' + input_id).innerText;
+    let lastNameValue = document.getElementById('table_last_name' + input_id).innerText;
+    let phoneValue = document.getElementById('table_address' + input_id).innerText;
+    let addressValue = document.getElementById('table_phone' + input_id).innerText;
+    
+    let editFirstName = document.getElementById('edit_first_name' + input_id).value;
+    let editLastName = document.getElementById('edit_last_name' + input_id).value;
+    let editPhone = document.getElementById('edit_address' + input_id).value;
+    let editAddress = document.getElementById('edit_phone' + input_id).value;
+
+    editFirstName.length == 0 ? firstName.innerText = firstNameValue : firstName.innerText = editFirstName;
+    editLastName.length == 0 ? lastName.innerText = lastNameValue : lastName.innerText = editLastName;
+    editPhone.length == 0 ? phone.innerText = phoneValue : phone.innerText = editPhone;
+    editAddress.length == 0 ? address.innerText = addressValue : address.innerText = editAddress;
+    
     document.getElementById(input_id).style.display = "none";
 }
